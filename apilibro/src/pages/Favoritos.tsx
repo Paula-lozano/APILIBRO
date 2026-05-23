@@ -1,0 +1,1 @@
+// En home tengo que agregar un boton para agregar a favoritos y en la pestaña favoritos es lo que se debe mostrar cuando se agrega a favoritos
