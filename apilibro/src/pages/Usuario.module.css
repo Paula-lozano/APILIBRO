@@ -1,23 +1,22 @@
 .container {
   max-width: 500px;
   margin: 3rem auto;
-  padding: 2rem 1rem;
-  font-family: system-ui, sans-serif;
+  padding: 0 1rem;
 }
 
 .formContainer, .userPanel {
   background: white;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 28px;
   padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
 }
 
 .title {
   font-size: 1.8rem;
   font-weight: 600;
   text-align: center;
+  color: #0f172a;
   margin-bottom: 1.5rem;
-  color: #1e293b;
 }
 
 .form {
@@ -27,11 +26,12 @@
 }
 
 .input {
-  padding: 0.75rem;
+  padding: 0.7rem;
   border: 1px solid #cbd5e1;
-  border-radius: 0.5rem;
+  border-radius: 16px;
   font-size: 1rem;
-  transition: border-color 0.2s;
+  background: white;
+  color: #1e293b;
 }
 
 .input:focus {
@@ -41,35 +41,34 @@
 }
 
 .submitButton, .logoutButton {
-  background-color: #3b82f6;
+  background: #3b82f6;
   color: white;
   border: none;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  font-weight: 500;
+  padding: 0.7rem;
+  border-radius: 24px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background 0.2s;
 }
 
 .submitButton:hover {
-  background-color: #2563eb;
+  background: #2563eb;
 }
 
 .logoutButton {
-  background-color: #ef4444;
+  background: #ef4444;
   margin-top: 1rem;
 }
 
 .logoutButton:hover {
-  background-color: #dc2626;
+  background: #dc2626;
 }
 
 .switchButton {
   background: none;
   border: none;
   color: #3b82f6;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   cursor: pointer;
   font-size: 0.9rem;
   text-decoration: underline;
@@ -79,13 +78,13 @@
   text-align: center;
   margin-top: 1rem;
   padding: 0.5rem;
-  border-radius: 0.5rem;
-  background-color: #f3f4f6;
-  color: #1f2937;
+  border-radius: 16px;
+  background: #f1f5f9;
+  color: #0f172a;
 }
 
 .email {
   text-align: center;
-  color: #4b5563;
+  color: #475569;
   margin-bottom: 1rem;
 }

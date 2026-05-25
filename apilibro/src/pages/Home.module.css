@@ -1,27 +1,89 @@
-.favoriteCell {
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
   text-align: center;
-  width: 100px;
-}
-
-.favoriteButton {
-  background: none;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 6px 12px;
-  cursor: pointer;
-  font-size: 0.85rem;
-  transition: all 0.2s;
-  background-color: #f9f9f9;
-}
-
-.favoriteButton:hover {
-  background-color: #f0f0f0;
-  transform: scale(1.02);
+  margin-bottom: 1.5rem;
 }
 
 .welcome {
   text-align: center;
   color: #3b82f6;
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.table thead {
+  background-color: #f1f5f9;
+}
+
+.table th {
+  text-align: left;
+  padding: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: #1e293b;
+}
+
+.titleCell {
+  font-weight: 500;
+}
+
+.authorCell {
+  color: #475569;
+}
+
+.favoriteCell {
+  text-align: center;
+  width: 110px;
+}
+
+.favoriteButton {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+  color: #1e293b;
+}
+
+.favoriteButton:hover {
+  background: #eef2ff;
+  border-color: #3b82f6;
+}
+
+.emptyMessage {
+  text-align: center;
+  padding: 2rem;
+  color: #64748b;
+}
+
+.statusMessage {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1rem;
+  color: #475569;
 }

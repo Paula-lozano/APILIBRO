@@ -1,0 +1,109 @@
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+}
+
+.stats {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background: white;
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  min-width: 130px;
+}
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: #475569;
+}
+
+.selectorSection {
+  background: #f8fafc;
+  padding: 1.2rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+}
+
+.selectLabel {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+}
+
+.select {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background: white;
+  color: #1e293b;
+  font-size: 1rem;
+}
+
+.select option {
+  color: #1e293b;
+  background: white;
+}
+
+.details {
+  background: white;
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.bookTitle {
+  font-size: 1.6rem;
+  color: #0f172a;
+  margin-bottom: 0.8rem;
+  border-left: 4px solid #3b82f6;
+  padding-left: 1rem;
+}
+
+.details p {
+  margin: 0.8rem 0;
+  color: #1e293b;
+}
+
+.formatList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.formatList li {
+  background: #eef2ff;
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.formatList a {
+  color: #2563eb;
+}

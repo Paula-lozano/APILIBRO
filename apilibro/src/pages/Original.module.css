@@ -1,0 +1,119 @@
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #475569;
+  margin-bottom: 2rem;
+}
+
+.randomizerCard {
+  background: #ffffff;
+  border-radius: 32px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.bookReveal {
+  display: flex;
+  gap: 1.5rem;
+  background: #f9fafb;
+  border-radius: 24px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: 0.2s;
+}
+
+.revealing {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+.cover {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.bookInfo {
+  flex: 1;
+}
+
+.bookTitle {
+  font-size: 1.4rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.author {
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+.fact {
+  display: inline-block;
+  background: #eef2ff;
+  padding: 0.2rem 0.8rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.summary {
+  font-style: italic;
+  color: #334155;
+  font-size: 0.9rem;
+}
+
+.randomButton {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  border-radius: 40px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.randomButton:hover {
+  background: #2563eb;
+}
+
+.counter {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  background: #f1f5f9;
+  padding: 0.4rem;
+  border-radius: 40px;
+  color: #1e293b;
+}
+
+.statusMessage {
+  text-align: center;
+  padding: 2rem;
+  color: #475569;
+}
+
+@media (max-width: 640px) {
+  .bookReveal {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

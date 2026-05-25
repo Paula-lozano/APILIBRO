@@ -5,7 +5,8 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Favoritos from './pages/Favoritos';
 import Usuario from './pages/Usuario';
-// ... otros imports (Informativa, Original)
+import Informativa from './pages/Informativa';
+import Original from './pages/Original';
 import './App.css';
 
 function App() {
@@ -18,8 +19,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/favoritos" element={<Favoritos />} />
             <Route path="/usuario" element={<Usuario />} />
-            <Route path="/original" element={<div>Original</div>} />
-            <Route path="/informativa" element={<div>Informativa</div>} />
+            <Route path="/informativa" element={<Informativa />} />
+            <Route path="/original" element={<Original />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>
