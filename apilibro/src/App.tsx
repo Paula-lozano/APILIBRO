@@ -1,25 +1,30 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { FavoritesProvider } from './context/FavoritesContext';
+import { UserProvider } from './context/UserContext';
+import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Favoritos from './pages/Favoritos';
-import Navbar from './components/Navbar';  // <-- Importación correcta
+import Usuario from './pages/Usuario';
+// ... otros imports (Informativa, Original)
 import './App.css';
 
 function App() {
   return (
-    <FavoritesProvider>
-      <BrowserRouter>
-        <Navbar />   {/* Aquí se renderiza el navbar */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/favoritos" element={<Favoritos />} />
-          <Route path="/informativa" element={<div>Informativa</div>} />
-          <Route path="/original" element={<div>Original</div>} />
-          <Route path="/usuario" element={<div>Usuario</div>} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </BrowserRouter>
-    </FavoritesProvider>
+    <UserProvider>
+      <FavoritesProvider>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/favoritos" element={<Favoritos />} />
+            <Route path="/usuario" element={<Usuario />} />
+            <Route path="/original" element={<div>Original</div>} />
+            <Route path="/informativa" element={<div>Informativa</div>} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </BrowserRouter>
+      </FavoritesProvider>
+    </UserProvider>
   );
 }
 

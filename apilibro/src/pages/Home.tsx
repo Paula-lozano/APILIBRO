@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import type { GutendexBook } from '../types/types';
 import { useFavorites } from '../context/FavoritesContext';
+import { useUser } from '../context/UserContext';
 import styles from './Home.module.css';
 
 const API_URL = 'https://gutendex.com/books/?languages=es';
@@ -10,6 +11,7 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const { addFavorite, removeFavorite, isFavorite } = useFavorites();
+  const { user } = useUser();
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -55,6 +57,7 @@ function Home() {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Libros en Español</h1>
+      {user && <p className={styles.welcome}>Bienvenido, {user.name}!</p>}
       <table className={styles.table}>
         <thead>
           <tr>

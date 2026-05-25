@@ -1,0 +1,91 @@
+.container {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem 1rem;
+  font-family: system-ui, sans-serif;
+}
+
+.formContainer, .userPanel {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 2rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input {
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.2);
+}
+
+.submitButton, .logoutButton {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+  background-color: #2563eb;
+}
+
+.logoutButton {
+  background-color: #ef4444;
+  margin-top: 1rem;
+}
+
+.logoutButton:hover {
+  background-color: #dc2626;
+}
+
+.switchButton {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.message {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.email {
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}

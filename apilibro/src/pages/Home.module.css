@@ -18,3 +18,10 @@
   background-color: #f0f0f0;
   transform: scale(1.02);
 }
+
+.welcome {
+  text-align: center;
+  color: #3b82f6;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
