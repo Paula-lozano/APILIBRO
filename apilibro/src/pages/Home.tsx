@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { GutendexBook } from '../types/types';
+import { useFavorites } from '../context/FavoritesContext';
 import styles from './Home.module.css';
 
 const API_URL = 'https://gutendex.com/books/?languages=es';
@@ -8,6 +9,7 @@ function Home() {
   const [books, setBooks] = useState<GutendexBook[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { addFavorite, removeFavorite, isFavorite } = useFavorites();
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -34,6 +36,14 @@ function Home() {
     return authors.map(a => a.name).join(', ');
   };
 
+  const handleFavoriteToggle = (book: GutendexBook) => {
+    if (isFavorite(book.id)) {
+      removeFavorite(book.id);
+    } else {
+      addFavorite(book);
+    }
+  };
+
   if (loading) {
     return <div className={styles.statusMessage}>Cargando libros...</div>;
   }
@@ -44,18 +54,19 @@ function Home() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Libros en Espanol</h1>
+      <h1 className={styles.title}>Libros en Español</h1>
       <table className={styles.table}>
         <thead>
           <tr>
-            <th>Titulo</th>
+            <th>Título</th>
             <th>Autor</th>
+            <th>Favorito</th>
           </tr>
         </thead>
         <tbody>
           {books.length === 0 ? (
             <tr>
-              <td colSpan={2} className={styles.emptyMessage}>
+              <td colSpan={3} className={styles.emptyMessage}>
                 No se encontraron libros.
               </td>
             </tr>
@@ -64,6 +75,14 @@ function Home() {
               <tr key={book.id}>
                 <td className={styles.titleCell}>{book.title}</td>
                 <td className={styles.authorCell}>{formatAuthors(book.authors)}</td>
+                <td className={styles.favoriteCell}>
+                  <button
+                    className={styles.favoriteButton}
+                    onClick={() => handleFavoriteToggle(book)}
+                  >
+                    {isFavorite(book.id) ? '❤️ Quitar' : '🤍 Agregar'}
+                  </button>
+                </td>
               </tr>
             ))
           )}
